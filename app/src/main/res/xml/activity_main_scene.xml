@@ -6,7 +6,10 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
+
+
         motion:duration="3000"
+
         motion:autoTransition="none"
 
 
@@ -14,8 +17,29 @@
        <KeyFrameSet>
        </KeyFrameSet>
         <OnClick motion:targetId="@id/shar2"
-            motion:clickAction="jumpToEnd" />
+            motion:clickAction="toggle" />
     </Transition>
+
+
+    <Transition
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@id/udar2"
+
+
+        motion:duration="3000"
+
+        motion:autoTransition="none"
+
+
+        >
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnClick motion:targetId="@id/shar1"
+            motion:clickAction="toggle" />
+    </Transition>
+
+
+
 
     <ConstraintSet android:id="@+id/start">
 
@@ -60,5 +84,7 @@
     </ConstraintSet>
     <Transition
         motion:constraintSetStart="@+id/end"
-        motion:constraintSetEnd="@+id/udar2" />
+        motion:constraintSetEnd="@+id/udar2" >
+        <OnClick motion:targetId="@+id/shar1" />
+    </Transition>
 </MotionScene>
