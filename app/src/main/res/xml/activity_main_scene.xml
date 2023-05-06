@@ -6,11 +6,15 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="3000">
+        motion:duration="3000"
+        motion:autoTransition="none"
+
+
+        >
        <KeyFrameSet>
        </KeyFrameSet>
         <OnClick motion:targetId="@id/shar2"
-            motion:clickAction="toggle" />
+            motion:clickAction="jumpToEnd" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -19,37 +23,42 @@
 
     <ConstraintSet android:id="@+id/end"
         android:layout_width="47dp"
-        android:layout_height="47dp"
+        android:layout_height="47dp" >
 
-        >
+
 
         <Constraint
             android:layout_height="48dp"
             android:layout_width="48dp"
             android:id="@+id/shar2"
+            motion:layout_constraintTop_toBottomOf="@+id/shar1"
+            android:layout_marginTop="0dp"
             motion:layout_constraintStart_toEndOf="@+id/field"
-            motion:layout_constraintEnd_toEndOf="@+id/field"
             motion:layout_constraintStart_toStartOf="@+id/field"
-            motion:layout_constraintHorizontal_bias="0.245"
-            motion:layout_constraintTop_toBottomOf="@+id/shar1" />
+            android:layout_marginStart="82dp"
+            android:layout_marginLeft="252dp" />
         <Constraint
             motion:layout_constraintVertical_bias="0.494"
             android:layout_height="654dp"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintHorizontal_bias="0.484"
+            motion:layout_constraintHorizontal_bias="0.494"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="352dp"
             android:id="@+id/field" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/udar2">
         <Constraint
             android:layout_height="47dp"
-            motion:layout_constraintStart_toStartOf="@+id/field"
-            motion:layout_constraintBottom_toBottomOf="@+id/field"
-            motion:layout_constraintHorizontal_bias="0.042"
-            motion:layout_constraintEnd_toEndOf="@+id/field"
             android:layout_width="47dp"
             android:id="@+id/shar1"
-            android:layout_marginBottom="604dp" />
+            motion:layout_constraintTop_toTopOf="@+id/luza4"
+            android:layout_marginTop="5dp"
+            motion:layout_constraintStart_toStartOf="@+id/luza4" />
     </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/udar2" />
 </MotionScene>
