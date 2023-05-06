@@ -4,16 +4,16 @@
         <shape
             android:shape="oval">
             <gradient android:type="radial"
-                android:gradientRadius="40dp"
+                android:gradientRadius="90dp"
 
                 android:startColor="@color/white"
                 android:endColor="@color/purple_700"
-                android:angle="45.0"/>
+                android:angle="90.0"/>
             <size
                 android:height="60dp"
                 android:width="60dp"/>
 
-            <corners android:radius="30dp" />
+            <corners android:radius="15dp" />
 
         </shape>
     </item>
